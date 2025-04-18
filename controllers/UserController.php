@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'crear') {
         UserModel::createUser($_POST['nombre'], $_POST['correo']);
-        header('Location: ../views/index.php');
+        header('Location: ../public/index.php');
     }
 
     /**
@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'editar') {
         UserModel::updateUser($_POST['id'], $_POST['nombre'], $_POST['correo']);
-        header('Location: ../views/index.php');
+        header('Location: ../public/index.php');
     }
 
     /**
@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'eliminar') {
         UserModel::deleteUser($_POST['id']);
-        header('Location: ../views/index.php');
+        header('Location: ../public/index.php');
     }
 }
 ?>

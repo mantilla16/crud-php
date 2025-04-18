@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'crear') {
         PlanesSusModel::createPlanSus($_POST['nombre'], $_POST['precio'], $_POST['duracion'], $_POST['descripcion']);
-        header('Location: ../views/planes.php');
+        header('Location: ../public/planes.php');
     }
     /**
      * Se llama al método updatePlanSus del modelo PlanesSusModel para actualizar un plan de suscripción existente.
@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'editar') {
         PlanesSusModel::updatePlanSus($_POST['nombre'], $_POST['precio'], $_POST['duracion'], $_POST['descripcion'], $_POST['id']);
-        header('Location: ../views/planes.php');
+        header('Location: ../public/planes.php');
     }
 
     /*
@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if ($accion === 'eliminar') {
         PlanesSusModel::deletePlanSus($_POST['id']);
-        header('Location: ../views/planes.php');
+        header('Location: ../public/planes.php');
     }
 }
 ?>

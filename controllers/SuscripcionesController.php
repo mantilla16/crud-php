@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     */
     if ($accion === 'crear') {
         SuscripcionesModel::createSuscripcion($_POST['usuario_id'], $_POST['plan_id'], $_POST['fecha_inicio'], $_POST['fecha_fin'], $_POST['estado']);
-        header('Location: ../views/suscripciones.php');
+        header('Location: ../public/suscripciones.php');
     }
 
     /**
@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      */
     if ($accion === 'editar') {
         SuscripcionesModel::updateSuscripcion($_POST['usuario_id'], $_POST['plan_id'], $_POST['fecha_inicio'], $_POST['fecha_fin'], $_POST['id'], $_POST['estado']);
-        header('Location: ../views/suscripciones.php');
+        header('Location: ../public/suscripciones.php');
     }
 
     /*
@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if ($accion === 'eliminar') {
         SuscripcionesModel::deleteSuscripcion($_POST['id']);
-        header('Location: ../views/suscripciones.php');
+        header('Location: ../public/suscripciones.php');
     }
 }
 ?>
