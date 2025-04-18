@@ -30,14 +30,15 @@ Se realizo un desarrollo en **PHP**, **MySQL** y **JavaScript**, para gestionar 
     |
     |----Public
     |    |
+    |    |Dockerfile
+    |    |index.php
+    |    |planes.php
+    |    |suscripciones.php
     |    |--script.js
     |    |--styles.css
     |
     |----Views
-    |    |
-    |    |index.php
-    |    |planes.php
-    |    |suscripciones.php
+
 
 
 CONTROLLERS:
